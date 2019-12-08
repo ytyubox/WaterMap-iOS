@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7372579239CA4E6004906D5 /* OverPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7372578239CA4E6004906D5 /* OverPass.swift */; };
+		A737257B239CA4F8004906D5 /* URL+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A737257A239CA4F8004906D5 /* URL+.swift */; };
+		A737257D239CA537004906D5 /* WaterMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A737257C239CA537004906D5 /* WaterMapViewModel.swift */; };
+		A7DAD71F239CF38000608568 /* MapKit+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DAD71E239CF38000608568 /* MapKit+.swift */; };
 		A7E225D4239A87E100A45C7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E225D3239A87E100A45C7D /* AppDelegate.swift */; };
 		A7E225D6239A87E100A45C7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E225D5239A87E100A45C7D /* SceneDelegate.swift */; };
 		A7E225D9239A87E100A45C7D /* WaterMap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7E225D7239A87E100A45C7D /* WaterMap.xcdatamodeld */; };
-		A7E225DB239A87E100A45C7D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E225DA239A87E100A45C7D /* ContentView.swift */; };
+		A7E225DB239A87E100A45C7D /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E225DA239A87E100A45C7D /* MapView.swift */; };
 		A7E225DD239A87E200A45C7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7E225DC239A87E200A45C7D /* Assets.xcassets */; };
 		A7E225E0239A87E200A45C7D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7E225DF239A87E200A45C7D /* Preview Assets.xcassets */; };
 		A7E225E3239A87E200A45C7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7E225E1239A87E200A45C7D /* LaunchScreen.storyboard */; };
 		A7E225EE239A87E200A45C7D /* WaterMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E225ED239A87E200A45C7D /* WaterMapTests.swift */; };
+		A7E225F9239C8D6900A45C7D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E225F8239C8D6900A45C7D /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,11 +33,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A7372578239CA4E6004906D5 /* OverPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverPass.swift; sourceTree = "<group>"; };
+		A737257A239CA4F8004906D5 /* URL+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+.swift"; sourceTree = "<group>"; };
+		A737257C239CA537004906D5 /* WaterMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterMapViewModel.swift; sourceTree = "<group>"; };
+		A7DAD71E239CF38000608568 /* MapKit+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapKit+.swift"; sourceTree = "<group>"; };
 		A7E225D0239A87E100A45C7D /* WaterMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E225D3239A87E100A45C7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7E225D5239A87E100A45C7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A7E225D8239A87E100A45C7D /* WaterMap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WaterMap.xcdatamodel; sourceTree = "<group>"; };
-		A7E225DA239A87E100A45C7D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A7E225DA239A87E100A45C7D /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		A7E225DC239A87E200A45C7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7E225DF239A87E200A45C7D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A7E225E2239A87E200A45C7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +49,7 @@
 		A7E225E9239A87E200A45C7D /* WaterMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E225ED239A87E200A45C7D /* WaterMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterMapTests.swift; sourceTree = "<group>"; };
 		A7E225EF239A87E200A45C7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7E225F8239C8D6900A45C7D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A7DAD720239CF40700608568 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				A7E225DA239A87E100A45C7D /* MapView.swift */,
+				A737257C239CA537004906D5 /* WaterMapViewModel.swift */,
+				A7DAD71E239CF38000608568 /* MapKit+.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		A7DAD721239CF41D00608568 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A7372578239CA4E6004906D5 /* OverPass.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A7E225C7239A87E100A45C7D = {
 			isa = PBXGroup;
 			children = (
@@ -83,7 +111,10 @@
 			children = (
 				A7E225D3239A87E100A45C7D /* AppDelegate.swift */,
 				A7E225D5239A87E100A45C7D /* SceneDelegate.swift */,
-				A7E225DA239A87E100A45C7D /* ContentView.swift */,
+				A7E225F8239C8D6900A45C7D /* ContentView.swift */,
+				A7DAD720239CF40700608568 /* Map */,
+				A7DAD721239CF41D00608568 /* Model */,
+				A737257A239CA4F8004906D5 /* URL+.swift */,
 				A7E225DC239A87E200A45C7D /* Assets.xcassets */,
 				A7E225E1239A87E200A45C7D /* LaunchScreen.storyboard */,
 				A7E225E4239A87E200A45C7D /* Info.plist */,
@@ -211,10 +242,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7DAD71F239CF38000608568 /* MapKit+.swift in Sources */,
 				A7E225D9239A87E100A45C7D /* WaterMap.xcdatamodeld in Sources */,
 				A7E225D4239A87E100A45C7D /* AppDelegate.swift in Sources */,
-				A7E225DB239A87E100A45C7D /* ContentView.swift in Sources */,
+				A737257B239CA4F8004906D5 /* URL+.swift in Sources */,
+				A7372579239CA4E6004906D5 /* OverPass.swift in Sources */,
+				A7E225DB239A87E100A45C7D /* MapView.swift in Sources */,
 				A7E225D6239A87E100A45C7D /* SceneDelegate.swift in Sources */,
+				A7E225F9239C8D6900A45C7D /* ContentView.swift in Sources */,
+				A737257D239CA537004906D5 /* WaterMapViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
