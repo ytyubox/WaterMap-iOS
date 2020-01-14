@@ -10,10 +10,10 @@ import SwiftUI
 import Combine
 
 struct ContentView: View {
-	private var viewModel = WaterMapViewModel.shared
+	private var viewModel = WaterMapViewModel()
 	var body: some View {
-		MapView().edgesIgnoringSafeArea(.vertical)
-		
+		MapView(vm: viewModel)
+			.edgesIgnoringSafeArea(.vertical)
     }
 	 func loadOverPass() {
 	

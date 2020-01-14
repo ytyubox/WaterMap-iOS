@@ -11,9 +11,8 @@ import Combine
 import SwiftUI
 import MapKit
 
-class WaterMapViewModel {
-	static let shared = WaterMapViewModel()
-	private init() {
+class WaterMapViewModel:ObservableObject {
+	init() {
 		load()
 		//		storeCancellable = store()
 	}
@@ -21,39 +20,29 @@ class WaterMapViewModel {
 	
 	private var fetchCancellable:Cancellable?
 	private var storeCancellable:Cancellable?
-	var landmarks:[LandmarkAnnotation] = [] {
-		didSet {
-			DispatchQueue.main.async {
-				self.view?.removeAnnotations(self.view?.annotations ?? [])
-				self.view?.addAnnotations(self.landmarks)
-			}
-		}
-	}
+	@Published var landmarks:[LandmarkAnnotation] = []
 	@FetchRequest(entity: Landmark.entity(),
 				  sortDescriptors: [])
 	var coreDataLandmarks:FetchedResults<Landmark>
 	@Environment(\.managedObjectContext) var cd
-	unowned var view:MKMapView?
 	
 	private func load() {
-		fetchCancellable = Overpass
-			.publisher
-			.map{
-				let s = $0.elements.compactMap{
-					return LandmarkAnnotation(title: $0.id.description,
-											  subtitle: $0.description,
-											  lat: $0.lat, lon: $0.lon)
-					
-				}
-				return s
-		}
-		.assertNoFailure()
-			//		.receive(on: RunLoop.main)
+		fetchCancellable =
+			Overpass
+				.publisher
+				.map{
+					let s = $0.elements.compactMap{
+						return LandmarkAnnotation(title: $0.id.description,
+												  subtitle: $0.description,
+												  lat: $0.lat, lon: $0.lon)
+						
+					}
+					print(s.count, Date())
+					return s
+			}
+			.assertNoFailure()
+			.receive(on: RunLoop.main)
 			.assign(to: \.landmarks, on: self)
 	}
-	//	private func store()->Cancellable {
-	//		$landmarks.sink{_ in}
-	//
-	//	}
 }
 

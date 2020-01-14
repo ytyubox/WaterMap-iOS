@@ -12,18 +12,21 @@ import MapKit
 
 struct MapView: UIViewRepresentable {
 	let view = MKMapView(frame: .zero)
+	@ObservedObject var vm:WaterMapViewModel
+	
 	func updateUIView(_ view: MKMapView, context: Context){
-		print(#function)
+		print(#function,Date())
 		updateAnnotations(from: view)
 	}
 	
 	private func updateAnnotations(from mapView: MKMapView) {
 		mapView.removeAnnotations(mapView.annotations)
 
-		let newAnnotations = WaterMapViewModel.shared.landmarks
+		let newAnnotations = vm.landmarks
 		mapView.addAnnotations(newAnnotations)
 		
 	}
+	
 	/**
 	- Description - Replace the body with a make UIView(context:) method that creates and return an empty MKMapView
 	*/
@@ -33,7 +36,6 @@ struct MapView: UIViewRepresentable {
 		let region = MKCoordinateRegion(center: coordinate, span: span)
 		view.delegate = context.coordinator
 		view.setRegion(region, animated: true)
-		WaterMapViewModel.shared.view = view
 		return view
 		
 	}
