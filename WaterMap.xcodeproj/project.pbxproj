@@ -18,7 +18,6 @@
 		A7E225DD239A87E200A45C7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7E225DC239A87E200A45C7D /* Assets.xcassets */; };
 		A7E225E0239A87E200A45C7D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7E225DF239A87E200A45C7D /* Preview Assets.xcassets */; };
 		A7E225E3239A87E200A45C7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7E225E1239A87E200A45C7D /* LaunchScreen.storyboard */; };
-		A7E225EE239A87E200A45C7D /* WaterMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E225ED239A87E200A45C7D /* WaterMapTests.swift */; };
 		A7E225F9239C8D6900A45C7D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E225F8239C8D6900A45C7D /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +46,6 @@
 		A7E225E2239A87E200A45C7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7E225E4239A87E200A45C7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7E225E9239A87E200A45C7D /* WaterMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7E225ED239A87E200A45C7D /* WaterMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterMapTests.swift; sourceTree = "<group>"; };
 		A7E225EF239A87E200A45C7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7E225F8239C8D6900A45C7D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,7 +133,6 @@
 		A7E225EC239A87E200A45C7D /* WaterMapTests */ = {
 			isa = PBXGroup;
 			children = (
-				A7E225ED239A87E200A45C7D /* WaterMapTests.swift */,
 				A7E225EF239A87E200A45C7D /* Info.plist */,
 			);
 			path = WaterMapTests;
@@ -258,7 +255,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7E225EE239A87E200A45C7D /* WaterMapTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
