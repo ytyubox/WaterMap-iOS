@@ -47,7 +47,7 @@ class MapViewCoordinator: NSObject, MKMapViewDelegate {
 	
 	func mapView(_ mapView: MKMapView,
 				 viewFor annotation: MKAnnotation) -> MKAnnotationView?{
-		//Custom View for Annotation
+    if annotation is 	MKUserLocation {return nil}
 		let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "customView")
 		annotationView.canShowCallout = true
 		//Your custom image icon

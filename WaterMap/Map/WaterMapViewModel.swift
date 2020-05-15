@@ -32,8 +32,8 @@ class WaterMapViewModel:ObservableObject {
 				.publisher
 				.map{
 					let s = $0.elements.compactMap{
-						return LandmarkAnnotation(title: $0.id.description,
-												  subtitle: $0.description,
+						return LandmarkAnnotation(title: $0.description,
+                                      subtitle: $0.id.description,
 												  lat: $0.lat, lon: $0.lon)
 						
 					}

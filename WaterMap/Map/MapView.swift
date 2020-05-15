@@ -16,9 +16,24 @@ struct MapView: UIViewRepresentable {
 	
 	func updateUIView(_ view: MKMapView, context: Context){
 		print(#function,Date())
+    view.showsUserLocation = true
 		updateAnnotations(from: view)
+    MyLocationManager.global.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+    MyLocationManager.global.startUpdatingLocation()
+    let location: CLLocationCoordinate2D = MyLocationManager.global.location!.coordinate
+    let span = MKCoordinateSpan(latitudeDelta: 0.009, longitudeDelta: 0.009)
+    let region = MKCoordinateRegion(center: location, span: span)
+    view.setRegion(region, animated: true)
+    
 	}
 	
+  func resetToUserLocation() {
+    let location = view.userLocation
+    let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 300, longitudinalMeters: 300)
+    view.setRegion(region, animated: true)
+
+  }
+  
 	private func updateAnnotations(from mapView: MKMapView) {
 		mapView.removeAnnotations(mapView.annotations)
 
@@ -36,6 +51,7 @@ struct MapView: UIViewRepresentable {
 		let region = MKCoordinateRegion(center: coordinate, span: span)
 		view.delegate = context.coordinator
 		view.setRegion(region, animated: true)
+    resetToUserLocation()
 		return view
 		
 	}

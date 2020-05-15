@@ -13,7 +13,9 @@ struct ContentView: View {
 	private var viewModel = WaterMapViewModel()
 	var body: some View {
 		MapView(vm: viewModel)
+      
 			.edgesIgnoringSafeArea(.vertical)
+      
     }
 	 func loadOverPass() {
 	

@@ -77,9 +77,10 @@ struct Overpass: Decodable {
 		let type: TypeEnum
 		let id: Int
 		let lat, lon: Double?
-		//		let tags: [String: String]
+    let tags: [String: String]
+    var description: String? {tags["description"]}
 		let amenity:String?//	2572
-		let description:String?//	2005
+//		let description:String?//	2005
 		let opening_hours:String?//	1314
 		let level:String?//	1102
 		let hot_water:String?//	993
