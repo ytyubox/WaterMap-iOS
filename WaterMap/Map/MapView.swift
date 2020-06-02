@@ -37,7 +37,7 @@ struct MapView: UIViewRepresentable {
 	private func updateAnnotations(from mapView: MKMapView) {
 		mapView.removeAnnotations(mapView.annotations)
 
-		let newAnnotations = vm.landmarks
+    let newAnnotations = vm.viewInfo.compactMap(LandmarkAnnotation.init)
 		mapView.addAnnotations(newAnnotations)
 		
 	}

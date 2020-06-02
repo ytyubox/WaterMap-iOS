@@ -11,12 +11,13 @@ import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    static var app:AppDelegate!
   let locationManager =  MyLocationManager.global
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
     locationManager.requestWhenInUseAuthorization()
+    Self.app = self
 		return true
 	}
 

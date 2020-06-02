@@ -10,23 +10,22 @@ import SwiftUI
 import Combine
 
 struct ContentView: View {
-	private var viewModel = WaterMapViewModel()
-	var body: some View {
-		MapView(vm: viewModel)
-      
-			.edgesIgnoringSafeArea(.vertical)
-      
+    private var viewModel = WaterMapViewModel()
+    var body: some View {
+        MapView(vm: viewModel)
+            
+            .edgesIgnoringSafeArea(.vertical)
+        
     }
-	 func loadOverPass() {
-	
-	}
+    func loadOverPass() {
+        
+    }
 }
 
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-		ZStack {
-        ContentView()
-			.edgesIgnoringSafeArea(.all)
-		}
+        ZStack {
+            ContentView()
+        }
     }
 }

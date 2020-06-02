@@ -35,6 +35,11 @@ class LandmarkAnnotation: NSObject, MKAnnotation {
 		self.subtitle = subtitle
 		self.coordinate = .init(latitude: lat, longitude: lon)
 	}
+    convenience init? (_ viewInfo:ViewInfo) {
+        self.init(title: viewInfo.name,
+                  subtitle: viewInfo.description,
+                  lat: viewInfo.lat, lon: viewInfo.lon)
+    }
 }
 
 class MapViewCoordinator: NSObject, MKMapViewDelegate {
